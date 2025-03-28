@@ -14,8 +14,6 @@ const Sidebar = () => {
     { path: "/ai-companion", label: "AI Companion", icon: "ri-chat-3-line" },
     { path: "/meditation", label: "Meditation", icon: "ri-meditation-line" },
     { path: "/calming-sounds", label: "Calming Sounds", icon: "ri-music-2-line" },
-    { path: "/sleep-tracker", label: "Sleep Tracker", icon: "ri-sleep-line" },
-    { path: "/community", label: "Community", icon: "ri-group-line" },
     { path: "/wellness-games", label: "Wellness Games", icon: "ri-gamepad-line" },
   ];
 
