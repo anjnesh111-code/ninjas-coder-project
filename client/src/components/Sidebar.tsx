@@ -5,7 +5,7 @@ const Sidebar = () => {
   const [location] = useLocation();
 
   const navItems = [
-    { path: "/", label: "Dashboard", icon: "ri-dashboard-line" },
+    { path: "/dashboard", label: "Dashboard", icon: "ri-dashboard-line" },
     { path: "/mood-tracking", label: "Mood Tracking", icon: "ri-emotion-line" },
     { path: "/ai-companion", label: "AI Companion", icon: "ri-chat-3-line" },
     { path: "/meditation", label: "Meditation", icon: "ri-meditation-line" },
