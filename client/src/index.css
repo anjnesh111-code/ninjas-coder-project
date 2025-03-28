@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 210 40% 98%;
+    
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+    
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+    
+    --primary: 174 100% 27%;
+    --primary-foreground: 210 40% 98%;
+    
+    --primary-light: 174 90% 41%;
+    --primary-dark: 174 100% 20%;
+    
+    --secondary: 262 51% 63%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --secondary-light: 262 40% 73%;
+    --secondary-dark: 262 40% 55%;
+    
+    --muted: 223 47% 11%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 224 71% 4%;
+
+    --success: 120, 63%, 54%;
+    --warning: 45, 100%, 65%;
+    --error: 0, 69%, 67%;
+    
+    --radius: 0.5rem;
+
+    --surface: 0 0% 12%;
+    --surface-light: 0 0% 18%;
+    --surface-lighter: 0 0% 20%;
+  }
+  
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-lighter rounded-sm;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6D6D6D;
+  }
+  
+  /* Animations */
+  .breathing-animation {
+    animation: breathing 5s ease-in-out infinite;
+  }
+  @keyframes breathing {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  .wave-animation {
+    position: relative;
+    overflow: hidden;
+  }
+  .wave-animation::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: wave 2s ease-out;
+  }
+  @keyframes wave {
+    0% { transform: scale(0); opacity: 0.5; }
+    100% { transform: scale(2); opacity: 0; }
+  }
+  
+  .mood-dot {
+    transition: all 0.3s ease;
+  }
+  .mood-dot:hover {
+    transform: scale(1.2);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
