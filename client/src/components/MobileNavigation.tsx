@@ -4,7 +4,11 @@ const MobileNavigation = () => {
   const [location] = useLocation();
 
   const navItems = [
+<<<<<<< HEAD
     { path: "/dashboard", label: "Home", icon: "ri-dashboard-line" },
+=======
+    { path: "/", label: "Home", icon: "ri-dashboard-line" },
+>>>>>>> ade6a7e91046f58a1680c172edb7cb1f5b8cbde1
     { path: "/mood-tracking", label: "Mood", icon: "ri-emotion-line" },
     { path: "/meditation", label: "Meditate", icon: "ri-meditation-line" },
     { path: "/ai-companion", label: "AI Chat", icon: "ri-chat-3-line" },
